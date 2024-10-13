@@ -19,7 +19,7 @@ const App = ({ articles }: ArticleProps) => {
   return (
     <div className="bg-white">
       <Head>
-        <title>{t("homepage.miu")}</title>
+        <title>{t("homepage.aikido")}</title>
         <link rel="icon" href="/logos/MinMIU.png" />
       </Head>
       <HomePage />

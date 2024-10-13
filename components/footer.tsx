@@ -12,7 +12,6 @@ const Footer = () => {
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
   const { t } = useTranslation();
   const navigateToAbout = () => {
-
     router.push("/about");
   };
   const handleTelephoneClick = (event: { preventDefault: () => void }) => {
@@ -22,7 +21,7 @@ const Footer = () => {
         navigator.userAgent
       )
     ) {
-      window.location.href = "tel:+97670007447"; // Initiates a phone call
+      window.location.href = "tel:+97680700888"; // Initiates a phone call
     } else {
       setShowPhoneNumber(!showPhoneNumber); // Toggle the visibility of the phone number
     }
@@ -32,9 +31,9 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white p-8">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-end">
-          <Image src="/logos/MIU.png" alt="Logo" width={40} height={30} />
+          <Image src="/logos/logowhite.png" alt="Logo" width={40} height={30} />
           <h1 className="text-2xl font-bold pl-5 text-white">
-            {t("homepage.miu")}
+            {t("homepage.aikido")}
           </h1>
         </div>
         <div className="flex items-center">
@@ -55,7 +54,7 @@ const Footer = () => {
           </Button>
           <div className="ml-4">
             <a
-              href="https://www.instagram.com/miu_mongolia/?hl=en"
+              href="https://www.instagram.com/aikidoinmongolia/"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-2"
@@ -63,7 +62,7 @@ const Footer = () => {
               <InstagramIcon />
             </a>
             <a
-              href="https://www.facebook.com/miunews2016/"
+              href="https://www.facebook.com/aikidoinmongolia"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-2"
@@ -73,8 +72,8 @@ const Footer = () => {
             <a href="#" onClick={handleTelephoneClick} className="mr-2">
               <PhoneIcon />
             </a>
-            {showPhoneNumber && <span className="mr-2">+976 7000-7447</span>}
-            <a href="mailto:admission@miu.edu.mn" className="mr-2">
+            {showPhoneNumber && <span className="mr-2">+976 80700888</span>}
+            <a href="mailto:apply@aikido.mn" className="mr-2">
               <EmailIcon />
             </a>
           </div>
@@ -82,7 +81,8 @@ const Footer = () => {
       </div>
       <div className="text-center mt-8">
         <p>
-          {new Date().getFullYear()} {t("homepage.miu")}. {t("footer.allright")}
+          {new Date().getFullYear()} {t("homepage.aikido")}.{" "}
+          {t("footer.allright")}
         </p>
       </div>
     </footer>
