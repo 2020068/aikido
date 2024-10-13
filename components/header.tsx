@@ -27,7 +27,7 @@ const Header = ({ isSearchVisible }: HeaderProps) => {
     <header className="text-white py-1 px-6 flex items-center justify-between">
       <div className="flex items-center justify-center flex-grow">
         <Image
-          src="/logos/MIU.png"
+          src="/logos/logowhite.png"
           alt={t("header.logo.alt")}
           width={40}
           height={30}
