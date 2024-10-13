@@ -29,11 +29,11 @@ const Menu: React.FC<MenuProps> = ({
     router.push("/news");
   };
 
-  const navigateToPrograms = () => {
-    router.push("/programs");
+  const navigateToAbout = () => {
+    router.push("/about");
   };
-  const navigateToLEI = () => {
-    router.push("/programs/LEI")
+  const navigateToContact = () => {
+    router.push("/contact")
   }
 
   const toggleSidebarMenu = () => {
@@ -46,30 +46,12 @@ const Menu: React.FC<MenuProps> = ({
   return (
     <div
       className={` h-screen bg-gray-500 bg-opacity-0  transform mt-8
-          ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
           -translate-y-[50vh] 2xl:-translate-y-[50vh] md:-translate-y-[30vh] transition-transform duration-500 ease-in-out`}
     >
       <div className="flex flex-col items-end justify-end h-full">
         {/* Larger Buttons */}
 
-        <Button
-          variant="contained"
-          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
-          style={{ borderRadius: "8px 0 0 8px" }}
-          onClick={toggleSidebarMenu}
-          startIcon={<MenuIcon />}
-        >
-          {t("menu.button.menu")}
-        </Button>
-        <Button
-          variant="contained"
-          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
-          style={{ borderRadius: "8px 0 0 8px" }}
-          onClick={toggleSidebarMenu}
-          startIcon={<MenuIcon />}
-        >
-          {t("menu.button.menu")}
-        </Button>
+        
         <Button
           variant="contained"
           className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
@@ -79,17 +61,37 @@ const Menu: React.FC<MenuProps> = ({
         >
           {t("menu.button.newsEvents")}
         </Button>
-
-        {/* Smaller Buttons */}
+        <Button
+          variant="contained"
+          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
+          startIcon={<EventIcon />}
+          onClick={navigateToAbout}
+        >
+          {t("menu.button.aboutUs")}
+        </Button>
+        <Button
+          variant="contained"
+          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
+          startIcon={<EventIcon />}
+          onClick={navigateToContact}
+        >
+          {t("menu.button.contact")}
+        </Button>
 
         <Link href="/Apply">
-          <Button
-            className="bg-blue-900 hover:bg-blue-500 hover:text-white text-center text-white font-bold py-2 rounded-l-lg mb-4 w-[140px]"
-            style={{ borderRadius: "8px 0 0 8px" }}
-          >
-            {t("menu.button.apply")}
-          </Button>
+        <Button
+          variant="contained"
+          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
+          startIcon={<EventIcon />}
+          onClick={handleNewsClick}
+        >
+          {t("menu.button.apply")}
+        </Button>
         </Link>
+        
         {/* <Button
           className="bg-blue-900 hover:bg-blue-500 hover:text-white text-white font-bold py-2 rounded-l-lg mb-4 w-[140px]"
           style={{ borderRadius: "8px 0 0 8px" }}
