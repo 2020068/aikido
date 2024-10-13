@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-const password = 'your-admin-password';  // Replace this with the actual password you want to hash
+const password = '12345';  // Replace with the actual admin password
 
 bcrypt.hash(password, 10, (err, hash) => {
   if (err) throw err;
