@@ -10,21 +10,15 @@ const HomePage = () => {
   const { t } = useTranslation();
   
   const imageUrls = [
-    "/collage_photos/main.jpg",
-    "/collage_photos/image2.jpg",
-    "/collage_photos/image3.jpg",
-    "/collage_photos/image4.jpg",
-    "/collage_photos/image5.jpg",
+    "/collage_photos/1.jpg",
+    "/collage_photos/2.jpg",
+    "/collage_photos/3.jpg",
+    "/collage_photos/4.jpg",
+    "/collage_photos/5.jpg",
+    "/collage_photos/6.jpg",
   ];
 
-  const [showSpan, setShowSpan] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSpan(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  
   const handleClick = () => {
     const bannerElement = document.getElementById("banner");
     if (bannerElement) {
@@ -58,46 +52,26 @@ const HomePage = () => {
         ))}
       </div>
 
-      <div className="absolute flex-col opacity-0 sm:opacity-100 inset-0 z-30 xl:top-[-20%] md:top-[-10%] top-[45%] flex items-center text-center md:flex md:justify-center">
+      <div className="absolute flex-col opacity-0 sm:opacity-100 inset-0 z-30 flex text-center md:flex pt-[150px] items-center">
         <span
-          className={` font-thin text-left text-[3vh] text-white  sm:text-[4vh] md:text-[6vh] xl:text-[7vh] ${
-            showSpan
-              ? "opacity-100 transition-opacity duration-1000"
-              : "opacity-0"
-          }`}
+          className=" font-thin text-left text-[3vh] text-white  sm:text-[4vh] md:text-[6vh] xl:text-[8vh] "
         >
-          {t("homepage.miu")}
+          {t("homepage.aikido")}
         </span>
       </div>
 
       <div className="absolute flex flex-col h-full justify-center inset-0 z-30 text-center text-italic">
         <span
-          className={`pt-[149%]  md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[35%] lg:pt-[55%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
-            showSpan
-              ? "opacity-100 transition-opacity duration-1000"
-              : "opacity-0"
-          }`}
+          className="md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[35%] lg:pt-[55%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px]"
         >
-          {t("homepage.miu.desc")}
+          {t("homepage.aikido.desc")}
         </span>
       </div>
 
       <div
-        className={`absolute inset-0 z-40 flex justify-center items-center md:top-[35%] xl:top-[30%] top-[30%] ${
-          showSpan
-            ? "opacity-100 transition-opacity duration-1000"
-            : "opacity-0"
-        }`}
+        className="absolute inset-0 z-40 flex justify-center items-center "
       >
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/xsP01AyZt2M?si=kgyc_fYFiIq_kllD"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8W3w3q2p5y0?si=sAse-mauexQ5Wd_5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       <div className="text-white text-3xl absolute inset-0 z-50  flex justify-center items-center top-[85%]">
         <Button
@@ -107,9 +81,7 @@ const HomePage = () => {
           <KeyboardArrowDownIcon fontSize="inherit" />
         </Button>
       </div>
-      <div className="absolute inset-0 z-30 opacity-80">
-        <div className="w-full h-full " > gif here</div>
-      </div>
+      
     </div>
   );
 };

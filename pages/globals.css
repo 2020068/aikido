@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 html,body{
   max-width: 100% !important;
   overflow-x: hidden !important;
@@ -24,7 +24,7 @@ html,body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Helvetica";
+  font-family: "Raleway";
 }
 main {
   flex: 1;
