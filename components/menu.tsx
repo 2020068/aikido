@@ -1,13 +1,13 @@
 /** @format */
 
-import { MenuIcon, SearchIcon, EventIcon } from "../assets/iconImports";
+import { SelfImprovement,AssignmentIcon,Call, EventIcon } from "../assets/iconImports";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 import Button from "@mui/material/Button";
-import { ArrowDropDown } from "@mui/icons-material";
+
 interface MenuProps {
   toggleSearchBar: () => void;
   toggleSidebarMenuParent: () => void;
@@ -46,7 +46,7 @@ const Menu: React.FC<MenuProps> = ({
   return (
     <div
       className={` h-screen bg-gray-500 bg-opacity-0  transform mt-8
-          -translate-y-[50vh] 2xl:-translate-y-[50vh] md:-translate-y-[30vh] transition-transform duration-500 ease-in-out`}
+          -translate-y-[50vh] 2xl:-translate-y-[50vh] transition-transform duration-500 ease-in-out`}
     >
       <div className="flex flex-col items-end justify-end h-full">
         {/* Larger Buttons */}
@@ -54,7 +54,7 @@ const Menu: React.FC<MenuProps> = ({
         
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          className="bg-black hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
           startIcon={<EventIcon />}
           onClick={handleNewsClick}
@@ -63,18 +63,18 @@ const Menu: React.FC<MenuProps> = ({
         </Button>
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          className="bg-black hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
-          startIcon={<EventIcon />}
+          startIcon={<SelfImprovement />}
           onClick={navigateToAbout}
         >
           {t("menu.button.aboutUs")}
         </Button>
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          className="bg-black hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
-          startIcon={<EventIcon />}
+          startIcon={<Call />}
           onClick={navigateToContact}
         >
           {t("menu.button.contact")}
@@ -83,9 +83,9 @@ const Menu: React.FC<MenuProps> = ({
         <Link href="/Apply">
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          className="bg-black hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
-          startIcon={<EventIcon />}
+          startIcon={<AssignmentIcon />}
           onClick={handleNewsClick}
         >
           {t("menu.button.apply")}

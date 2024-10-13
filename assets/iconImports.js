@@ -6,12 +6,15 @@ import FlightTakeoffIcon from "@mui/icons-material/Flight";
 import MenuIcon from "@mui/icons-material/Menu";
 import SchoolIcon from "@mui/icons-material/School";
 import SearchIcon from "@mui/icons-material/Search";
-
+import SelfImprovement from "@mui/icons-material/SelfImprovement"
+import Call from "@mui/icons-material/Call"
 export {
   AssignmentIcon,
   EventIcon,
   FlightTakeoffIcon,
   MenuIcon,
   SchoolIcon,
+  SelfImprovement,
   SearchIcon,
+  Call
 };
