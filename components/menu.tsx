@@ -22,8 +22,8 @@ const Menu: React.FC<MenuProps> = ({
   const [hoverPrograms, setHoverPrograms] = useState(false);
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState(false);
 
-  const navigateToVisit = () => {
-    router.push("/visit");
+  const navigateToApply = () => {
+    router.push("/apply");
   };
   const handleNewsClick = () => {
     router.push("/news");
@@ -86,7 +86,7 @@ const Menu: React.FC<MenuProps> = ({
           className="bg-black hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
           startIcon={<AssignmentIcon />}
-          onClick={handleNewsClick}
+          onClick={navigateToApply}
         >
           {t("menu.button.apply")}
         </Button>
