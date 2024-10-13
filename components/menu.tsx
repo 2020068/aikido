@@ -65,10 +65,10 @@ const Menu: React.FC<MenuProps> = ({
           variant="contained"
           className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
-          startIcon={<SearchIcon />}
-          onClick={handleSearchClick}
+          onClick={toggleSidebarMenu}
+          startIcon={<MenuIcon />}
         >
-          {t("menu.button.search")}
+          {t("menu.button.menu")}
         </Button>
         <Button
           variant="contained"
@@ -90,7 +90,7 @@ const Menu: React.FC<MenuProps> = ({
             {t("menu.button.apply")}
           </Button>
         </Link>
-        <Button
+        {/* <Button
           className="bg-blue-900 hover:bg-blue-500 hover:text-white text-white font-bold py-2 rounded-l-lg mb-4 w-[140px]"
           style={{ borderRadius: "8px 0 0 8px" }}
           onClick={navigateToVisit}
@@ -129,7 +129,7 @@ const Menu: React.FC<MenuProps> = ({
               </Button>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

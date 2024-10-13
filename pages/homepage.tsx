@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Spline from "@splinetool/react-spline";
 import HomeImageCarousel from "@/components/homeImageCarousel";
 
 import { useTranslation } from "react-i18next";
@@ -9,9 +8,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import HomePageLighting from "@/components/homepageLighting";
 const HomePage = () => {
   const { t } = useTranslation();
-  const splineSceneUrl =
-    "https://prod.spline.design/aq9nu5lzr0amJAQ1/scene.splinecode";
-
+  
   const imageUrls = [
     "/collage_photos/main.jpg",
     "/collage_photos/image2.jpg",
@@ -111,7 +108,7 @@ const HomePage = () => {
         </Button>
       </div>
       <div className="absolute inset-0 z-30 opacity-80">
-        <Spline className="w-full h-full " scene={splineSceneUrl} />
+        <div className="w-full h-full " > gif here</div>
       </div>
     </div>
   );

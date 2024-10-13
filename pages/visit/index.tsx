@@ -1,6 +1,6 @@
 import React from "react";
 import ImageCarousel from "@/components/imageCarousel";
-import MapGoogle from "@/components/googleMap";
+
 import { useTranslation } from "react-i18next";
 
 const VisitorPage: React.FC = () => {
@@ -15,7 +15,7 @@ const VisitorPage: React.FC = () => {
         image={"/images/visit_photo.jpg"}
       />
       <div className="mt-[50vh]  w-full">
-        <MapGoogle />
+        
       </div>
 
       <div className="w-full">
