@@ -1,72 +1,100 @@
 /** @format */
 
-import React from "react";
-import Link from "next/link";
-import Button from "@mui/material/Button";
-import { useTranslation } from "react-i18next";
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import { Button, Link } from "@mui/material";
+import { t } from "i18next";
+import Image from "next/image";
 
-const AboutPage: React.FC = () => {
-  const { t } = useTranslation();
+const AboutPage = () => {
   return (
-    <div>
-      <div className='about-container'>
-        <div className='header'></div>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <div className='button-group'>
-          <div className='flex flex-col items-end justify-end h-full'>
-            <Link href='..'>
-              <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
-                {t("about.button.back")}
-              </Button>
-            </Link>
-            <Link href='./about/campus/campus'>
-              <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
-                {t("about.button.campus")}
-              </Button>
-            </Link>
-            <Link href='./about/employee/employee'>
-              <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
-                {t("about.button.employee")}
-              </Button>
-            </Link>
-          </div>
-        </div>
+    <div className="min-h-screen flex flex-col items-center justify-start bg-gray-100">
+      {/* Top Image */}
+      <div className="w-full relative">
+        <Image
+          src="/aboutPage/aboutpage/aikidoAboutBackground.jpg" // Add your image path here
+          alt="Top Banner"
+          layout="responsive"
+          width={1600}
+          height={400} // Adjust height for the desired banner size
+          className="object-cover"
+        />
       </div>
-      <div className='sight-word'>
-        <div className='sight-word1'>{t("about.text.sight-word1")}</div>
-      </div>
-      <div className='box1'>
-        <div className='box2'>
-          <div className='CeoDescription'>
-            <div className='title3'> {t("about.text.title3")}</div>
-            <p>{t("about.text.Ceodescription")}</p>
-          </div>
-          <div className='CeoImg'>
-            <img src='/aboutPage/aboutpage/ceo.jpg' />
-          </div>
-        </div>
-        <div className='box2'>
-          <div className='LeaderDescription'>
-            <div className='title2'>{t("about.text.title2")}</div>
-            <p>
-              {t("about.text.LeaderDescription")}
-              {t("about.text.intro")}
-              {t("about.text.director")}
-              {t("about.text.signature")}
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="bg-white shadow-lg p-10 rounded-lg flex flex-col md:flex-row items-center">
+          {/* Left: Contact Info */}
+          <div className="md:w-2/3 text-center md:text-left">
+            <div className="button-group">
+              <div className="flex flex-col items-end justify-end h-full">
+                <Link href="..">
+                  <Button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]">
+                    {t("about.button.back")}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <h1 className="text-4xl font-bold mb-5">About us</h1>
+            <p className="mb-4">
+              If you have any questions or would like to learn more about
+              becoming a student at BigRock Aikikai, please call or email us at{" "}
+              <a href="/" className="text-red-600 underline">
+                Click here
+              </a>
+              .
             </p>
+
+            <div className="mt-5">
+              <h2 className="font-bold text-xl">
+                Contact & Location Information
+              </h2>
+              <p>
+                <strong>BigRock Aikikai</strong>
+                <br />
+                Sensei Steve Erickson
+                <br />
+                Chief Instructor
+                <br />
+                Ph. 403 617 6541
+              </p>
+
+              <p className="mt-4">
+                <strong>BigRock Aikikai - Main Dojo</strong>
+                <br />
+                Bay G, 7004 - 5th Street SE
+                <br />
+                Calgary, Alberta, T2H 2G3
+                <br />
+                Ph. 403 201 8652
+              </p>
+
+              <p className="mt-4">
+                <strong>BigRock Aikikai - South Fish Creek Dojo</strong>
+                <br />
+                South Fish Creek Recreation Complex
+                <br />
+                100, 333 Shawville Boulevard SE
+                <br />
+                Calgary, Alberta, T2Y 4H3
+                <br />
+                Ph. 403 201 8652
+              </p>
+            </div>
           </div>
-          <div className='LeaderImg'>
-            <img src='/aboutPage/aboutpage/Leader.jpg' />
-          </div>
-        </div>
-        <div className='box2'>
-          <div className='boxDescription'>
-            <div className='title1'>{t("about.text.title1")}</div>
-            <p>{t("about.text.boxDescription")}</p>
-          </div>
-          <div className='boxImg'>
-            <img src='/aboutPage/aboutpage/Dgraduation.jpg' />
+
+          {/* Right: Image Placeholder */}
+          <div className="md:w-1/3 mt-10 md:mt-0 md:ml-10">
+            <Image
+              src="/aboutPage/aboutpage/aikidoAbout1.png"
+              alt="Dojo Image"
+              width={300}
+              height={200}
+              className="rounded-lg shadow-md"
+            />
+            <Image
+              src="/aboutPage/aboutpage/aikidoAbout2.jpg"
+              alt="Dojo Image"
+              width={300}
+              height={200}
+              className="rounded-lg shadow-md mt-5"
+            />
           </div>
         </div>
       </div>
