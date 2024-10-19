@@ -36,9 +36,8 @@ const AboutPage = () => {
               If you have any questions or would like to learn more about
               becoming a student at BigRock Aikikai, please call or email us at{" "}
               <a href="/" className="text-red-600 underline">
-                Click here
+                Click here for more Info
               </a>
-              .
             </p>
 
             <div className="mt-5">
@@ -101,5 +100,6 @@ const AboutPage = () => {
     </div>
   );
 };
+/*Use tailwind for (css) and for main fundementals use typescript due to it's usefulness */
 
 export default AboutPage;
