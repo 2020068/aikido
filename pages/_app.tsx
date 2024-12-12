@@ -9,7 +9,6 @@ import "./globals.css";
 import "./applycs.css";
 import "./about/about.css";
 
-import "/components/carousel/embla.css";
 import "../components/marquee/marquee.css";
 import Sidebar from "@/components/sidebarmenu";
 
